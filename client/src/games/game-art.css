@@ -1,0 +1,100 @@
+.tic-board {
+  padding: 16px;
+  gap: 12px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #57436e, #332c4c);
+  border: 2px solid #79688c;
+  box-shadow:
+    0 15px 35px #0003,
+    inset 0 2px 0 #d5bdfb20;
+}
+.tic-board .cell {
+  position: relative;
+  background: linear-gradient(150deg, #3e3758, #302b48);
+  border: 1px solid #756184;
+  border-radius: 16px;
+  box-shadow:
+    0 5px 0 #211d36,
+    inset 0 2px 0 #e0c7fc0d;
+}
+.tic-board .cell:not(:disabled):hover {
+  background: #53436b;
+  transform: translateY(-2px);
+}
+.tic-board .cell.winning {
+  background: #6f4d91;
+  border-color: #d3b3ff;
+}
+.board-mark {
+  width: 68%;
+  height: 68%;
+  filter: drop-shadow(0 4px 0 #0d0c202e);
+}
+.cell-mark-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.gomoku {
+  background: repeating-linear-gradient(3deg, #d8b57f 0px, #d8b57f 8px, #d4ae76 9px, #d8b57f 11px);
+  padding: 18px;
+  border: 5px solid #9d754b;
+  box-shadow:
+    0 8px 0 #6f5239,
+    0 15px 35px #0003;
+}
+.gomoku .cell {
+  border-color: #906c3e80;
+}
+.gomoku .cell .stone {
+  background: radial-gradient(circle at 30% 25%, #7a919e, #2a3948 65%);
+  box-shadow: 1px 3px 2px #54391f80;
+}
+.gomoku .cell.p2 .stone {
+  background: radial-gradient(circle at 30% 25%, #fffef4, #e4d5af 75%);
+}
+.gomoku .cell.winning {
+  background: #8cdcc282;
+}
+.touch-player .flip-control {
+  width: 58px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: #5d3a83;
+  color: #f5eaff;
+  border-color: #a182c6;
+}
+:root[data-theme='light'] .tic-board {
+  background: linear-gradient(145deg, #e3d6ef, #c5aedb);
+  border-color: #b396c9;
+}
+:root[data-theme='light'] .tic-board .cell {
+  background: linear-gradient(145deg, #f6f0fc, #e4d8ef);
+  border-color: #c2acd4;
+  box-shadow:
+    0 5px 0 #ad92c5,
+    inset 0 2px 0 #fff;
+}
+:root[data-theme='light'] .tic-board .cell.winning {
+  background: #d9bdef;
+  border-color: #9063b4;
+}
+@media (max-width: 580px) {
+  .tic-board {
+    padding: 13px;
+    gap: 9px;
+  }
+  .tic-board .cell {
+    border-radius: 13px;
+  }
+  .gomoku {
+    padding: 9px;
+    border-width: 3px;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "2player-arena",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm start -w server",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:db": "node scripts/test-with-mysql.mjs",
+    "db:setup": "node server/src/config/setup-db.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "concurrently": "^9.2.1",
+    "prettier": "^3.9.10",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

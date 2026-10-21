@@ -1,0 +1,22 @@
+{
+  "name": "@arena/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1",
+    "mysql2": "^3.15.1",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^6.0.0",
+    "zod": "^4.1.11",
+    "dotenv": "^17.2.2",
+    "helmet": "^8.1.0",
+    "express-rate-limit": "^8.1.0",
+    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.7"
+  }
+}

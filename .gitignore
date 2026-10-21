@@ -1,0 +1,9 @@
+node_modules/
+client/dist/
+.env
+server/.env
+client/.env
+playwright-report/
+test-results/
+*.log
+.local/
